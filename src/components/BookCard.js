@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import Button from './cmsButton';
 
 const BookCard = ({ book }) => (
-  <div className="book-card">
+  <li className="book-card">
     <div>
       <h5 className="book-category">{book.category}</h5>
       <h3 className="book-name">{book.bookName}</h3>
@@ -26,7 +26,7 @@ const BookCard = ({ book }) => (
       <p>Chapter 3: &quot;A Lesson Learned&quot;</p>
       <Button btnType="button" classes="update" textCont="Update progress" />
     </div>
-  </div>
+  </li>
 );
 
 BookCard.defaultProps = {

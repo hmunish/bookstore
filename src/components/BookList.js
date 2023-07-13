@@ -18,9 +18,11 @@ const BookList = () => {
   ]);
   return (
     <section className="book-list">
-      {booksDetails.map((book) => (
-        <BookCard key={book.bookName} book={book} />
-      ))}
+      <ul>
+        {booksDetails.map((book) => (
+          <BookCard key={book.bookName} book={book} />
+        ))}
+      </ul>
     </section>
   );
 };
