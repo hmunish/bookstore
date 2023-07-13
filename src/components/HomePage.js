@@ -1,6 +1,5 @@
-/*eslint-disable */
-import BookList from "./BookList";
-import AddBook from "./AddBook";
+import BookList from './BookList';
+import AddBook from './AddBook';
 
 const HomePage = () => (
   <section className="books-section">
