@@ -32,7 +32,7 @@ export const booksSlice = createSlice({
   reducers: {
     addBook: (state, bookDetails) => {
       // Adds book on the state
-      state.value.push(bookDetails);
+      state.value.push(bookDetails.payload);
     },
     removeBook: (state, bookDetails) => {
       // Removes book from the state
