@@ -5,7 +5,7 @@ const BookCard = ({ book }) => (
   <li className="book-card">
     <div>
       <h5 className="book-category">{book.category}</h5>
-      <h3 className="book-name">{book.bookName}</h3>
+      <h3 className="book-name">{book.title}</h3>
       <p className="author">{book.author}</p>
       <div className="book-actions">
         <Button btnType="button" classes="book-actions" textCont="Comments" />

@@ -1,7 +1,29 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  value: [],
+  value: [
+    {
+      item_id: 'item1',
+      title: 'The Great Gatsby',
+      author: 'John Smith',
+      category: 'Fiction',
+      completed: 50,
+    },
+    {
+      item_id: 'item2',
+      title: 'Anna Karenina',
+      author: 'Leo Tolstoy',
+      category: 'Fiction',
+      completed: 75,
+    },
+    {
+      item_id: 'item3',
+      title: 'The Selfish Gene',
+      author: 'Richard Dawkins',
+      category: 'Nonfiction',
+      completed: 10,
+    },
+  ],
 };
 
 export const booksSlice = createSlice({
