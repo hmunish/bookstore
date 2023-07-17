@@ -38,7 +38,7 @@ export const booksSlice = createSlice({
     removeBook: (state, bookDetails) => {
       // Removes book from the state
       state.value = state.value.filter(
-        (book) => book.bookName !== bookDetails.bookName,
+        (book) => book.bookName !== bookDetails.payload.bookName,
       );
     },
   },

@@ -16,13 +16,15 @@ const AddBook = () => {
       completed: 0,
     };
     dispatch(addBook(newBook));
+
+    e.target.reset();
   };
   return (
     <section className="add-book">
       <h3>Add Book</h3>
       <form onSubmit={handleSubmit}>
-        <input name="bookName" type="text" placeholder="Book Name" />
-        <input name="bookAuthor" type="text" placeholder="Author" />
+        <input name="bookName" type="text" placeholder="Book Name" required />
+        <input name="bookAuthor" type="text" placeholder="Author" required />
         <input type="submit" placeholder="Submit" />
       </form>
     </section>
