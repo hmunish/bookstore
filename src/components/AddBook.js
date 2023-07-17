@@ -1,6 +1,7 @@
 /*eslint-disable */
 import { useDispatch } from "react-redux";
 import { addBook } from "../redux/books/booksSlice";
+import { v4 as uuidv4 } from "uuid";
 
 const AddBook = () => {
   const dispatch = useDispatch();
@@ -8,7 +9,7 @@ const AddBook = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const newBook = {
-      item_id: "item4",
+      item_id: uuidv4(),
       title: e.target.bookName.value,
       author: e.target.bookAuthor.value,
       category: "Nonfiction",

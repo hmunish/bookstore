@@ -1,23 +1,24 @@
+import { v4 as uuidv4 } from 'uuid';
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   value: [
     {
-      item_id: 'item1',
+      item_id: uuidv4(),
       title: 'The Great Gatsby',
       author: 'John Smith',
       category: 'Fiction',
       completed: 50,
     },
     {
-      item_id: 'item2',
+      item_id: uuidv4(),
       title: 'Anna Karenina',
       author: 'Leo Tolstoy',
       category: 'Fiction',
       completed: 75,
     },
     {
-      item_id: 'item3',
+      item_id: uuidv4(),
       title: 'The Selfish Gene',
       author: 'Richard Dawkins',
       category: 'Nonfiction',
