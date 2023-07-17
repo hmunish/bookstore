@@ -1,26 +1,13 @@
-import { useState } from 'react';
+import { useSelector } from 'react-redux';
 import BookCard from './BookCard';
 
 const BookList = () => {
-  const [booksDetails] = useState([
-    {
-      category: 'Action',
-      bookName: 'The Hunger Games',
-      author: 'Suzanne Collins',
-      completed: 50,
-    },
-    {
-      category: 'Science Fiction',
-      bookName: 'Dune',
-      author: 'Frank Herbert',
-      completed: 8,
-    },
-  ]);
+  const booksDetails = useSelector((state) => state.books.value);
   return (
     <section className="book-list">
       <ul>
         {booksDetails.map((book) => (
-          <BookCard key={book.bookName} book={book} />
+          <BookCard key={book.item_id} book={book} />
         ))}
       </ul>
     </section>

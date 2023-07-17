@@ -2,10 +2,10 @@ import PropTypes from 'prop-types';
 import Button from './cmsButton';
 
 const BookCard = ({ book }) => (
-  <li className="book-card">
+  <li className="book-card" data-id={book.item_id}>
     <div>
       <h5 className="book-category">{book.category}</h5>
-      <h3 className="book-name">{book.bookName}</h3>
+      <h3 className="book-name">{book.title}</h3>
       <p className="author">{book.author}</p>
       <div className="book-actions">
         <Button btnType="button" classes="book-actions" textCont="Comments" />
