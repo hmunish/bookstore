@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+nav {
+  width: 100%;
+  padding: 25px 45px;
+  display: flex;
+  align-items: center;
+  gap: 0 55px;
+}
+
+nav > ul {
+  display: flex;
+  gap: 0 35px;
+  text-transform: uppercase;
+  flex-basis: 70%;
+}
+
+nav > ul > li > a {
+  color: #121212;
+  opacity: 0.5;
+}
+
+.main-title {
+  color: #0290ff;
+  font-size: 1.875rem;
+}
+
+.user {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #f5f6fa;
+  box-shadow: 0 0 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.userIcon {
+  width: 75%;
+  height: 75%;
+  cursor: pointer;
+  background-image: url(../assets/user.png);
+  background-size: 100%;
+  background-position: center;
+}
+
+.book-list {
+  padding: 45px;
+}
+
+.book-list > ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 25px 0;
+}
+
+.book-list > ul > li {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 55px 25px;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+}
