@@ -14,11 +14,10 @@ const BookCard = ({ book }) => (
       </div>
     </div>
     <div className="completed-status">
-      <progress value={book.completed} max={100} />
+      <progress value={25} max={100} />
       <p>
-        {book.completed}
-        %
-        <span>Completed</span>
+        25%
+        <span> Completed</span>
       </p>
     </div>
     <div>
