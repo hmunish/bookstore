@@ -5,10 +5,24 @@ const Navbar = () => (
     <h1 className="main-title">Bookstore CMS</h1>
     <ul>
       <li>
-        <NavLink to="/">Home</NavLink>
+        <NavLink
+          style={({ isActive }) => ({
+            opacity: isActive ? 1 : 0.5,
+          })}
+          to="/"
+        >
+          Home
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/categories">Categories</NavLink>
+        <NavLink
+          style={({ isActive }) => ({
+            opacity: isActive ? 1 : 0.5,
+          })}
+          to="/categories"
+        >
+          Categories
+        </NavLink>
       </li>
     </ul>
     <div className="user">
