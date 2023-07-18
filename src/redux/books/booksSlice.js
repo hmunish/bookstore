@@ -1,14 +1,12 @@
-/*eslint-disable */
-// import { v4 as uuidv4 } from 'uuid';
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import axios from 'axios';
 
-const APP_ID = "cvyaRivZIi68x1gZMrIT";
+const APP_ID = 'cvyaRivZIi68x1gZMrIT';
 
-export const fetchBooks = createAsyncThunk("books/fetchBooks", async () => {
+export const fetchBooks = createAsyncThunk('books/fetchBooks', async () => {
   try {
     const res = await axios.get(
-      `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${APP_ID}/books`
+      `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${APP_ID}/books`,
     );
     return res.data;
   } catch (err) {
@@ -17,21 +15,21 @@ export const fetchBooks = createAsyncThunk("books/fetchBooks", async () => {
 });
 
 export const addNewBook = createAsyncThunk(
-  "books/addNewBook",
+  'books/addNewBook',
   async (newBook) => {
     try {
       const res = await axios.post(
         `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${APP_ID}/books`,
         newBook,
         {
-          "Content-Type": "application/json",
-        }
+          'Content-Type': 'application/json',
+        },
       );
-      return res;
+      return res.data;
     } catch (err) {
       return err;
     }
-  }
+  },
 );
 
 const initialState = {
@@ -41,7 +39,7 @@ const initialState = {
 };
 
 export const booksSlice = createSlice({
-  name: "books",
+  name: 'books',
   initialState,
   reducers: {
     addBook: (state, bookDetails) => {
@@ -51,7 +49,7 @@ export const booksSlice = createSlice({
     removeBook: (state, bookId) => {
       // Removes book from the state
       state.value = state.value.filter(
-        (book) => book.item_id !== bookId.payload
+        (book) => book.item_id !== bookId.payload,
       );
     },
   },
@@ -62,7 +60,7 @@ export const booksSlice = createSlice({
     builder.addCase(fetchBooks.fulfilled, (state, action) => {
       state.loading = false;
       state.value = action.payload || {};
-      state.error = "";
+      state.error = '';
     });
     builder.addCase(fetchBooks.rejected, (state, action) => {
       state.loading = false;
@@ -70,7 +68,6 @@ export const booksSlice = createSlice({
       state.error = action.error.message;
     });
     builder.addCase(addNewBook.fulfilled, (state, action) => {
-      console.log(action.meta.arg);
       const newBookId = action.meta.arg.item_id;
       state.value[newBookId] = [
         {

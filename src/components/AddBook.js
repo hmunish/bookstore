@@ -1,7 +1,6 @@
-/*eslint-disable */
-import { useDispatch } from "react-redux";
-import { addBook, addNewBook } from "../redux/books/booksSlice";
-import { v4 as uuidv4 } from "uuid";
+import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
+import { addNewBook } from '../redux/books/booksSlice';
 
 const AddBook = () => {
   const dispatch = useDispatch();
@@ -12,7 +11,7 @@ const AddBook = () => {
       item_id: uuidv4(),
       title: e.target.bookName.value,
       author: e.target.bookAuthor.value,
-      category: "Nonfiction",
+      category: 'Nonfiction',
     };
     dispatch(addNewBook(newBook));
 
