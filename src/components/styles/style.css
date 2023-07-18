@@ -141,7 +141,8 @@ div.completed-status {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background: radial-gradient(closest-side, white 79%, transparent 80% 100%),
+  background:
+    radial-gradient(closest-side, white 79%, transparent 80% 100%),
     conic-gradient(#0290ff 75%, rgb(199, 197, 197) 0);
 }
 
@@ -164,7 +165,7 @@ button.update {
   background: #0290ff;
   border-radius: 3px;
   border: none;
-  color: #ffffff;
+  color: #fff;
   cursor: pointer;
   font-size: 0.813rem;
   font-weight: 300;
@@ -202,7 +203,7 @@ button.update {
 
 .add-book > form > input[type="submit"] {
   background-color: #0290ff;
-  color: #ffffff;
+  color: #fff;
   border: none;
   border-radius: 3px;
   font-weight: bold;
