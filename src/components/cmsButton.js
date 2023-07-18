@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/booksSlice';
+import { deleteBook } from '../redux/books/booksSlice';
 
 const Button = ({ btnType, classes, textCont }) => {
   const dispatch = useDispatch();
   const handleClick = (e) => {
     const { id } = e.target.closest('li').dataset;
-    dispatch(removeBook(id));
+    dispatch(deleteBook(id));
   };
   return (
     <button
