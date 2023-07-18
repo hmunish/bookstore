@@ -1,6 +1,6 @@
 /*eslint-disable */
 import { useDispatch } from "react-redux";
-import { addBook } from "../redux/books/booksSlice";
+import { addBook, addNewBook } from "../redux/books/booksSlice";
 import { v4 as uuidv4 } from "uuid";
 
 const AddBook = () => {
@@ -13,9 +13,8 @@ const AddBook = () => {
       title: e.target.bookName.value,
       author: e.target.bookAuthor.value,
       category: "Nonfiction",
-      completed: 0,
     };
-    dispatch(addBook(newBook));
+    dispatch(addNewBook(newBook));
 
     e.target.reset();
   };
